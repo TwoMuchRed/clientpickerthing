@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select |  Ruby Arcade</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet">
+    <link rel="icon" href="/favicon.ico" type="image/png">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  
+<div class="mcplaycontainer">
+    <div class="mcsidebar">
+        <span class="version">Versions</span>
+        <div class="icon" onclick="changeContent('ec18')">
+            <img src="icons/1.8.png"/>
+            <span>Eaglercraft 1.8</span>
+        </div>
+        <div class="icon" onclick="changeContent('ec15')">
+            <img src="icons/1.5.png"/>
+            <span>Eaglercraft 1.5</span>
+        </div>
+        <div class="icon" onclick="changeContent('ec13')">
+            <img src="icons/1.3.png"/>
+            <span>Eaglercraft 1.3</span>
+        </div>
+        <div class="icon" onclick="changeContent('alpha')">
+            <img src="icons/alpha.png"/>
+            <span>Eaglercraft Alpha</span>
+        </div>
+        <div class="icon" onclick="changeContent('precision')">
+            <img src="icons/precision.png"/>
+            <span>Precision Client</span>
+        </div>
+        <div class="icon" onclick="changeContent('resent')">
+            <img src="icons/resent.png"/>
+            <span>Resent Client</span>
+        </div>
+
+    </div>
+
+
+<div class="playmc-container" id="playmc-container">
+    <img id="game-image" src="media/ec18.png">
+    <div class="play-bar">
+    <a id="game-link" href="Eaglercraft_v1.8/" target="_blank"><button class="play-button" id="play-button">Play</button></a>
+</div>
+</div>
+
+<script>
+    function changeContent(game) {
+        const imageElement = document.getElementById('game-image');
+        const buttonElement = document.getElementById('play-button');
+        const linkElement = document.getElementById('game-link');
+
+        switch (game) {
+            case 'ec18':
+                imageElement.src = 'media/ec18.png';
+                buttonElement.innerText = 'Play';
+                linkElement.href = 'Eaglercraft_v1.8/';
+                break;
+            case 'ec15':
+                imageElement.src = 'media/ec15.png';
+                buttonElement.innerText = 'Play';
+                linkElement.href = 'Eaglercraft_v1.5/';
+                break;
+            case 'ec13':
+                imageElement.src = 'media/ec13.png';
+                buttonElement.innerText = 'Play';
+                linkElement.href = 'Eaglercraft_v1.3/';
+                break;
+            case 'alpha':
+                imageElement.src = 'media/ecalpha.png';
+                buttonElement.innerText = 'Play';
+                linkElement.href = 'Eaglercraft_alpha/';
+                break;
+            case 'resent':
+                imageElement.src = 'media/resent.png';
+                buttonElement.innerText = 'Play';
+                linkElement.href = 'resentclient/';
+                break;
+            case 'precision':
+                imageElement.src = 'media/precision.png';
+                buttonElement.innerText = 'Play';
+                linkElement.href = 'precisionclient/';
+                break;
+        }
+    }
+</script>
+
+</body>
+
+</html>
